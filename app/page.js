@@ -12,9 +12,9 @@ export default function Home() {
       <Hero />
       <ServicesOverview />
       <WhyChooseUs />
+      <ClientLogos />
       <FeaturedProjects />
       <Testimonials />
-      <ClientLogos />
       <CTABanner />
     </>
   );

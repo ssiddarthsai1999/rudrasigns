@@ -47,12 +47,28 @@ export default function CTABanner() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href="/contact" className="btn-primary">
-            Start a Project
-            <ArrowRight className="w-5 h-5 btn-icon" />
+          <Link
+            href="/contact"
+            className="relative inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold tracking-widest uppercase text-white bg-primary/90 border border-primary/50 rounded transition-all duration-300 hover:bg-primary hover:border-primary/80 hover:shadow-[0_0_20px_rgba(14,165,233,0.4),0_0_50px_rgba(14,165,233,0.15)] group"
+            style={{ fontFamily: "var(--font-space)" }}
+          >
+            <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30" />
+            <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/30" />
+            <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/30" />
+            <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30" />
+            <span>Start a Project</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
 
-          <a href="tel:+918110020567" className="btn-outline">
+          <a
+            href="tel:+918110020567"
+            className="relative inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold tracking-widest uppercase text-primary border border-primary/30 rounded transition-all duration-300 hover:text-white hover:bg-primary/10 hover:border-primary/60 hover:shadow-[0_0_20px_rgba(14,165,233,0.3),0_0_40px_rgba(14,165,233,0.1)] group"
+            style={{ fontFamily: "var(--font-space)" }}
+          >
+            <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary/40" />
+            <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary/40" />
+            <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary/40" />
+            <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary/40" />
             <Phone className="w-4 h-4" />
             <span>081100 20567</span>
           </a>

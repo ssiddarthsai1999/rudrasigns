@@ -48,9 +48,17 @@ export default function ServiceCTA({ serviceName }) {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Link href="/contact" className="btn-primary">
-            Request a Quote
-            <ArrowRight className="w-4 h-4 btn-icon" />
+          <Link
+            href="/contact"
+            className="relative inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold tracking-widest uppercase text-white bg-primary/90 border border-primary/50 rounded transition-all duration-300 hover:bg-primary hover:border-primary/80 hover:shadow-[0_0_20px_rgba(14,165,233,0.4),0_0_50px_rgba(14,165,233,0.15)] group"
+            style={{ fontFamily: "var(--font-space)" }}
+          >
+            <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30" />
+            <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/30" />
+            <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/30" />
+            <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30" />
+            <span>Request a Quote</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </motion.div>
       </div>

@@ -90,8 +90,13 @@ export default function MobileMenu({ isOpen, onClose }) {
                 <Link
                   href="/contact"
                   onClick={onClose}
-                  className="bg-primary text-white rounded-full px-8 py-3 font-semibold text-lg hover:bg-primary-dark transition-all duration-300 inline-block"
+                  className="relative inline-flex items-center justify-center gap-2 px-8 py-3 text-sm font-semibold tracking-widest uppercase text-white bg-primary/90 border border-primary/50 rounded transition-all duration-300 hover:bg-primary hover:border-primary/80 hover:shadow-[0_0_20px_rgba(14,165,233,0.4),0_0_50px_rgba(14,165,233,0.15)]"
+                  style={{ fontFamily: "var(--font-space)" }}
                 >
+                  <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30" />
+                  <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/30" />
+                  <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/30" />
+                  <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30" />
                   Get a Quote
                 </Link>
               </motion.div>

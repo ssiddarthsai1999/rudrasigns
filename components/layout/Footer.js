@@ -18,24 +18,8 @@ export default function Footer() {
   return (
     <footer className="bg-dark border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top section */}
-        <div className="py-20">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-            Let&apos;s build something
-            <br />
-            great together<span className="text-primary">.</span>
-          </h2>
-          <Link
-            href="/contact"
-            className="btn-primary mt-8 text-sm px-6 py-3"
-          >
-            Get in Touch
-            <ArrowUpRight className="w-4 h-4 btn-icon" />
-          </Link>
-        </div>
-
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
           {/* Col 1 - Brand */}
           <div>
             <span className="text-xl font-extrabold text-white">

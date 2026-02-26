@@ -105,7 +105,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonial Content */}
-          <div className="relative z-1 min-h-80 md:min-h-75 flex items-center justify-center">
+          <div className="relative z-1 min-h-96 md:min-h-90 flex items-center justify-center">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={testimonial.id}
@@ -139,18 +139,20 @@ const Testimonials = () => {
                   ))}
                 </div>
 
-                {/* Author Info */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <span className="text-primary font-bold text-sm">
-                      {testimonial.avatar}
-                    </span>
-                  </div>
-                  <div className="text-left">
-                    <p className="font-bold text-dark">{testimonial.name}</p>
-                    <p className="text-sm text-body">
-                      {testimonial.role}, {testimonial.company}
-                    </p>
+                {/* Author Info + Dots row */}
+                <div className="flex flex-col items-center gap-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <span className="text-primary font-bold text-sm">
+                        {testimonial.avatar}
+                      </span>
+                    </div>
+                    <div className="text-left">
+                      <p className="font-bold text-dark">{testimonial.name}</p>
+                      <p className="text-sm text-body">
+                        {testimonial.role}, {testimonial.company}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -158,7 +160,7 @@ const Testimonials = () => {
           </div>
 
           {/* Mobile Navigation Arrows */}
-          <div className="flex md:hidden justify-center gap-4 mt-8">
+          <div className="flex md:hidden justify-center gap-4 mt-10">
             <button
               onClick={() => paginate(-1)}
               className="w-12 h-12 flex items-center justify-center border border-gray-200 rounded-full text-gray-400 hover:border-primary hover:text-primary transition-colors duration-200 cursor-pointer"
@@ -176,7 +178,7 @@ const Testimonials = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="flex items-center justify-center gap-2 mt-8">
+          <div className="flex items-center justify-center gap-2 mt-10">
             {displayTestimonials.map((_, index) => (
               <button
                 key={index}
