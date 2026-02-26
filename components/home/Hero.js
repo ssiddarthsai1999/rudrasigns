@@ -375,17 +375,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex items-center gap-3 mb-6 sm:mb-10"
+          className="flex flex-wrap items-center gap-2 sm:gap-3 mb-6 sm:mb-10"
           style={{ transform: "translateZ(20px)" }}
         >
-          <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
+          <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
             <Star size={14} className="text-amber-400 fill-amber-400" />
-            <span className="text-sm font-medium text-white tracking-wide">
+            <span className="text-xs sm:text-sm font-medium text-white tracking-wide">
               4.9 ON GOOGLE
             </span>
           </div>
-          <span className="w-px h-5 bg-white/20" />
-          <span className="text-sm text-gray-500 font-medium">
+          <span className="w-px h-5 bg-white/20 hidden sm:block" />
+          <span className="text-xs sm:text-sm text-gray-500 font-medium">
             10+ Years of Excellence
           </span>
         </motion.div>
