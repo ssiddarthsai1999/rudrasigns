@@ -22,15 +22,15 @@ const getCategoryLabel = (cat) => {
 function SandStream() {
   const grains = useMemo(() => {
     const arr = [];
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 80; i++) {
       arr.push({
         id: i,
         y: Math.random() * 100,
-        size: 1 + Math.random() * 3,
-        duration: 2.5 + Math.random() * 5,
-        delay: Math.random() * 10,
-        drift: -10 + Math.random() * 20,
-        opacity: 0.4 + Math.random() * 0.6,
+        size: 1 + Math.random() * 2.5,
+        duration: 6 + Math.random() * 8,
+        delay: Math.random() * 12,
+        drift: -6 + Math.random() * 12,
+        opacity: 0.3 + Math.random() * 0.5,
       });
     }
     return arr;

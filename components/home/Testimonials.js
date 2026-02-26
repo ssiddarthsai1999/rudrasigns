@@ -54,7 +54,7 @@ const Testimonials = () => {
   return (
     <section className="py-24 lg:py-32 bg-surface relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header — centered editorial style */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,8 +104,8 @@ const Testimonials = () => {
             </button>
           </div>
 
-          {/* Testimonial Content */}
-          <div className="relative z-1 min-h-96 md:min-h-90 flex items-center justify-center">
+          {/* Testimonial Content — fixed height container */}
+          <div className="relative z-1 h-105 sm:h-90 md:h-105 flex items-center justify-center">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={testimonial.id}
@@ -118,15 +118,15 @@ const Testimonials = () => {
                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
               >
                 {/* Quote Text */}
-                <p className="text-xl md:text-2xl lg:text-3xl font-medium text-dark leading-relaxed italic max-w-3xl mx-auto mb-10">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-dark leading-relaxed italic max-w-3xl mx-auto mb-6">
                   {testimonial.quote}
                 </p>
 
                 {/* Divider */}
-                <div className="w-16 h-px bg-primary mx-auto mb-6" />
+                <div className="w-16 h-px bg-primary mx-auto mb-3" />
 
                 {/* Star Rating */}
-                <div className="flex gap-1 mb-5">
+                <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
@@ -139,28 +139,29 @@ const Testimonials = () => {
                   ))}
                 </div>
 
-                {/* Author Info + Dots row */}
-                <div className="flex flex-col items-center gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <span className="text-primary font-bold text-sm">
-                        {testimonial.avatar}
-                      </span>
-                    </div>
-                    <div className="text-left">
-                      <p className="font-bold text-dark">{testimonial.name}</p>
-                      <p className="text-sm text-body">
-                        {testimonial.role}, {testimonial.company}
-                      </p>
-                    </div>
+                {/* Author Info */}
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <span className="text-primary font-bold text-xs">
+                      {testimonial.avatar}
+                    </span>
+                  </div>
+                  <div className="text-left">
+                    <p className="font-bold text-dark text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-body">
+                      {testimonial.role}, {testimonial.company}
+                    </p>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
+        </div>
 
+        {/* Controls — OUTSIDE the relative testimonial container */}
+        <div className="max-w-4xl mx-auto mt-8">
           {/* Mobile Navigation Arrows */}
-          <div className="flex md:hidden justify-center gap-4 mt-10">
+          <div className="flex md:hidden justify-center gap-4 mb-6">
             <button
               onClick={() => paginate(-1)}
               className="w-12 h-12 flex items-center justify-center border border-gray-200 rounded-full text-gray-400 hover:border-primary hover:text-primary transition-colors duration-200 cursor-pointer"
@@ -178,7 +179,7 @@ const Testimonials = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="flex items-center justify-center gap-2 mt-10">
+          <div className="flex items-center justify-center gap-2">
             {displayTestimonials.map((_, index) => (
               <button
                 key={index}
